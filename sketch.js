@@ -40,20 +40,15 @@ function draw() {
     background(51);
 
     ground.display();
+    
     // displaying tower at xpos = 900
-    for (var i = 0; i < boxes1.length; i++) {
-        boxes1[i].display();
-    }
+    Display(boxes1);
 
     // displaying tower at xpos =  800
-    for (var i = 0; i < boxes2.length; i++) {
-        boxes2[i].display();
-    }
+    Display(boxes2);
 
     // displaying tower at xpos = 700
-    for (var i = 0; i < boxes3.length; i++) {
-        boxes3[i].display();
-    }
+    Display(boxes3);
 
     // displaying the wrecking ball
     rope.display();
@@ -71,5 +66,12 @@ function Loop(i, x, boxes) {
     for (var m = 1; m <= i; m++) {
         var box = new Box(x, 100);
         boxes.push(box);
+    }
+}
+
+// function for displaying boxes
+function Display(boxes) {
+    for (var i = 0; i < boxes.length; i++) {
+        boxes[i].display();
     }
 }
